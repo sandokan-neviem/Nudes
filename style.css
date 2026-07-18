@@ -1,0 +1,58 @@
+body{
+    margin:0;
+    background:black;
+    color:red;
+    font-family:Arial,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.overlay{
+    text-align:center;
+}
+
+.skull{
+    font-size:120px;
+    animation:flash .5s infinite;
+}
+
+h1{
+    font-size:38px;
+    text-shadow:0 0 20px red;
+}
+
+.progress{
+    width:300px;
+    height:20px;
+    border:2px solid red;
+    margin:20px auto;
+}
+
+.bar{
+    width:0%;
+    height:100%;
+    background:red;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:red;
+    color:white;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#percent{
+    font-size:25px;
+}
+
+@keyframes flash{
+    0%{opacity:1;}
+    50%{opacity:.2;}
+    100%{opacity:1;}
+}
