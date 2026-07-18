@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Systémová chyba</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay">
+    <div class="skull">💀</div>
+
+    <h1>TELEFÓN BOL HACKNUTÝ!</h1>
+
+    <p>Pripájam sa k zariadeniu...</p>
+
+    <div class="progress">
+        <div class="bar"></div>
+    </div>
+
+    <div id="percent">0%</div>
+
+    <button onclick="startPrank()">Spustiť kontrolu</button>
+</div>
+
+<script>
+let p = 0;
+
+function startPrank(){
+    const interval = setInterval(()=>{
+        if(p >= 100){
+            clearInterval(interval);
+            document.querySelector("h1").innerHTML="PRÍSTUP ZÍSKANÝ";
+            document.querySelector("p").innerHTML="😂 Pokoj, je to len žart!";
+        }else{
+            p++;
+            document.getElementById("percent").innerHTML=p+"%";
+            document.querySelector(".bar").style.width=p+"%";
+        }
+    },60);
+}
+</script>
+
+</body>
+</html>
